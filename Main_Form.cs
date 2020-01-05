@@ -166,6 +166,45 @@ namespace Coil_EML
             }
         }
 
-       
+        //솔레노이드에 저장되는 에너지 구하기
+        private void Solenoid_Energy_Button_Click(object sender, EventArgs e)
+        {
+            double inductance = -1;
+            double current = -1;
+            double Ew = -1;
+
+            //파싱 예외처리
+            try
+            {
+                inductance = double.Parse(Solenoid_Inductance_TextBox.Text.Trim());
+                inductance = inductance / 1000 / 1000; //micro로 변환
+            }
+            catch (Exception exception)
+            {
+                TextBox_WriteLine("인덕턴스 입력란에 숫자가 아닙니다." + exception.Message);
+            }
+
+            //파싱 예외처리
+            try
+            {
+                current = double.Parse(Solenoid_Current_TextBox.Text.Trim());
+            }
+            catch (Exception exception)
+            {
+                TextBox_WriteLine("인가전류 입력란에 숫자가 아닙니다." + exception.Message);
+            }
+
+            if (inductance > 0 && current > 0)
+            {
+                Electronic_Formula formula = new Electronic_Formula();
+
+                Ew = formula.Solenoid_Energy(inductance, current);
+            }
+
+            if(Ew >= 0)
+            {
+                TextBox_WriteLine("코일 인덕턴스 " + (inductance * 1000 * 1000 )+ "uH 인가전류 " + current + "A 솔레노이드 에너지 => " + Ew + "J");
+            }
+        }
     }
 }

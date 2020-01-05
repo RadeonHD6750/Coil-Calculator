@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.System_Message_Box = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Ek_TextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.Projectile_Velocity_TextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Projectile_Length_TextBox = new System.Windows.Forms.TextBox();
@@ -52,11 +54,10 @@
             this.Rising_Time_TextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Energy_to_Velocity = new System.Windows.Forms.Button();
             this.Projectile_Ek_Button = new System.Windows.Forms.Button();
             this.TextBox_Clear = new System.Windows.Forms.Button();
-            this.Energy_to_Velocity = new System.Windows.Forms.Button();
-            this.Ek_TextBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Solenoid_Energy_Button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -91,6 +92,25 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "탄자";
+            // 
+            // Ek_TextBox
+            // 
+            this.Ek_TextBox.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ek_TextBox.Location = new System.Drawing.Point(670, 123);
+            this.Ek_TextBox.Name = "Ek_TextBox";
+            this.Ek_TextBox.Size = new System.Drawing.Size(188, 39);
+            this.Ek_TextBox.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(442, 126);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(188, 28);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "운동에너지 (J)";
             // 
             // Projectile_Velocity_TextBox
             // 
@@ -302,6 +322,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Silver;
+            this.groupBox4.Controls.Add(this.Solenoid_Energy_Button);
             this.groupBox4.Controls.Add(this.Energy_to_Velocity);
             this.groupBox4.Controls.Add(this.Projectile_Ek_Button);
             this.groupBox4.Font = new System.Drawing.Font("HY헤드라인M", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -313,6 +334,18 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "계산";
             // 
+            // Energy_to_Velocity
+            // 
+            this.Energy_to_Velocity.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Energy_to_Velocity.ForeColor = System.Drawing.Color.Black;
+            this.Energy_to_Velocity.Location = new System.Drawing.Point(12, 138);
+            this.Energy_to_Velocity.Name = "Energy_to_Velocity";
+            this.Energy_to_Velocity.Size = new System.Drawing.Size(335, 60);
+            this.Energy_to_Velocity.TabIndex = 1;
+            this.Energy_to_Velocity.Text = "에너지에 의한 탄속 계산";
+            this.Energy_to_Velocity.UseVisualStyleBackColor = true;
+            this.Energy_to_Velocity.Click += new System.EventHandler(this.Energy_to_Velocity_Click);
+            // 
             // Projectile_Ek_Button
             // 
             this.Projectile_Ek_Button.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -321,7 +354,7 @@
             this.Projectile_Ek_Button.Name = "Projectile_Ek_Button";
             this.Projectile_Ek_Button.Size = new System.Drawing.Size(335, 60);
             this.Projectile_Ek_Button.TabIndex = 0;
-            this.Projectile_Ek_Button.Text = "탄자 운동에너지";
+            this.Projectile_Ek_Button.Text = "탄자 운동에너지 계산";
             this.Projectile_Ek_Button.UseVisualStyleBackColor = true;
             this.Projectile_Ek_Button.Click += new System.EventHandler(this.Projectile_Ek_Button_Click);
             // 
@@ -336,36 +369,17 @@
             this.TextBox_Clear.UseVisualStyleBackColor = true;
             this.TextBox_Clear.Click += new System.EventHandler(this.TextBox_Clear_Click);
             // 
-            // Energy_to_Velocity
+            // Solenoid_Energy_Button
             // 
-            this.Energy_to_Velocity.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Energy_to_Velocity.ForeColor = System.Drawing.Color.Black;
-            this.Energy_to_Velocity.Location = new System.Drawing.Point(12, 138);
-            this.Energy_to_Velocity.Name = "Energy_to_Velocity";
-            this.Energy_to_Velocity.Size = new System.Drawing.Size(335, 60);
-            this.Energy_to_Velocity.TabIndex = 1;
-            this.Energy_to_Velocity.Text = "에너지에 의한 탄속";
-            this.Energy_to_Velocity.UseVisualStyleBackColor = true;
-            this.Energy_to_Velocity.Click += new System.EventHandler(this.Energy_to_Velocity_Click);
-            // 
-            // Ek_TextBox
-            // 
-            this.Ek_TextBox.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Ek_TextBox.Location = new System.Drawing.Point(670, 123);
-            this.Ek_TextBox.Name = "Ek_TextBox";
-            this.Ek_TextBox.Size = new System.Drawing.Size(188, 39);
-            this.Ek_TextBox.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(442, 126);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(188, 28);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "운동에너지 (J)";
+            this.Solenoid_Energy_Button.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Solenoid_Energy_Button.ForeColor = System.Drawing.Color.Black;
+            this.Solenoid_Energy_Button.Location = new System.Drawing.Point(384, 57);
+            this.Solenoid_Energy_Button.Name = "Solenoid_Energy_Button";
+            this.Solenoid_Energy_Button.Size = new System.Drawing.Size(335, 60);
+            this.Solenoid_Energy_Button.TabIndex = 2;
+            this.Solenoid_Energy_Button.Text = "솔레노이드 에너지 계산";
+            this.Solenoid_Energy_Button.UseVisualStyleBackColor = true;
+            this.Solenoid_Energy_Button.Click += new System.EventHandler(this.Solenoid_Energy_Button_Click);
             // 
             // Main_Form
             // 
@@ -385,7 +399,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "코일건 계산기 v1 by Jimin TECH";
+            this.Text = "코일건 계산기 v1.0";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Form_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -428,6 +442,7 @@
         private System.Windows.Forms.Button Energy_to_Velocity;
         private System.Windows.Forms.TextBox Ek_TextBox;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button Solenoid_Energy_Button;
     }
 }
 
