@@ -10,3 +10,15 @@ S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_EML\obj\Release\Coil_Calcu
 S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_EML\obj\Release\Coil_Calculator.csproj.CopyComplete
 S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_EML\obj\Release\Coil_Calculator.exe
 S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_EML\obj\Release\Coil_Calculator.pdb
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\bin\Release\Coil_Calculator.exe.config
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\bin\Release\Coil_Calculator.exe
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\bin\Release\Coil_Calculator.pdb
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\bin\Release\Electronic_Formula_Library.dll
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\bin\Release\Electronic_Formula_Library.pdb
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\obj\Release\Coil_Calculator.csprojAssemblyReference.cache
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\obj\Release\Coil_EML.Main_Form.resources
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\obj\Release\Coil_Calculator.Properties.Resources.resources
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\obj\Release\Coil_Calculator.csproj.GenerateResource.cache
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\obj\Release\Coil_Calculator.csproj.CopyComplete
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\obj\Release\Coil_Calculator.exe
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coil_Calculator\obj\Release\Coil_Calculator.pdb

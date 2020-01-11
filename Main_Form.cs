@@ -8,16 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Electronic_Formula_Library;
+using Winform_Control_Text_Handler_Module;
 
 namespace Coil_EML
 {
     public partial class Main_Form : Form
     {
+        Winform_Control_Text_Handler controltexthandler;
 
-        private delegate void TextBox_WriteLine_Delegate(string str);
+        List<Control> input_field_list;
+
         public Main_Form()
         {
             InitializeComponent();
+
+            controltexthandler = new Winform_Control_Text_Handler();
+            controltexthandler.Set_Text_Control(System_Message_Box);
+
+            input_field_list = new List<Control>();
+
+            //탄자
+            input_field_list.Add(Projectile_Mass_TextBox);
+            input_field_list.Add(Projectile_Velocity_TextBox);
+            input_field_list.Add(Projectile_Length_TextBox);
+            input_field_list.Add(Ek_TextBox);
+
+            //솔레노이드
+            input_field_list.Add(Solenoid_Inductance_TextBox);
+            input_field_list.Add(Solenoid_Current_TextBox);
+            input_field_list.Add(Solenoid_Length_TextBox);
+            input_field_list.Add(Solenoid_Voltage_TextBox);
+
+            //타이밍
+            input_field_list.Add(Rising_Time_TextBox);
+            input_field_list.Add(Accelerator_Stagenumber_TextBox);
         }
 
         public void Exit()
@@ -25,25 +49,9 @@ namespace Coil_EML
             Application.Exit();
         }
 
-        //텍스트 박스에 문자열 쓰기
         public void TextBox_WriteLine(string str)
         {
-            if(System_Message_Box.InvokeRequired)
-            {
-                TextBox_WriteLine_Delegate textbox_writeline_delegate = new TextBox_WriteLine_Delegate(TextBox_WriteLine_Callback);
-                System_Message_Box.Invoke(textbox_writeline_delegate, str);
-            }
-            else
-            {
-                TextBox_WriteLine_Callback(str);
-            }
-        }
-
-
-        //텍스트 박스에 문자열 콜벡함수
-        private void TextBox_WriteLine_Callback(string str)
-        {
-            System_Message_Box.AppendText(str + "\n");
+            controltexthandler.TextControlWrite(str);
         }
 
         private void TextBox_Clear_Click(object sender, EventArgs e)
@@ -206,5 +214,95 @@ namespace Coil_EML
                 TextBox_WriteLine("코일 인덕턴스 " + (inductance * 1000 * 1000 )+ "uH 인가전류 " + current + "A 솔레노이드 에너지 => " + Ew + "J");
             }
         }
+
+        //텍스트 박스 클리어
+        private void TetxtCotrol_Clear(object sender)
+        {
+            //각종 예외처리
+            if (sender != null)
+            {
+                TextBox temp = null;
+
+                try
+                {
+                    temp = (TextBox)sender;
+                }
+                catch(Exception exception)
+                {
+                    TextBox_WriteLine(exception.Message);
+                }
+
+                temp?.Clear();
+            }
+        }
+
+        //입력값 전부 지우기
+        private void textbox_clear_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < input_field_list.Count; i++)
+            {
+                TetxtCotrol_Clear(input_field_list[i]);
+            }
+        }
+
+        //입력값들 개별로 지우기
+
+        //탄자질량 지우기
+        private void projectile_mass_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Projectile_Mass_TextBox);
+        }
+
+        //탄자탄속 지우기
+        private void muzzle_velocity_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Projectile_Velocity_TextBox);
+        }
+
+        //탄자길이 지우기
+        private void projectile_length_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Projectile_Length_TextBox);
+        }
+
+        //탄자 운동에너지 지우기
+        private void Ek_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Ek_TextBox);
+        }
+
+        //솔레노이드 인덕턴스 지우기
+        private void solenoid_inductance_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Solenoid_Inductance_TextBox);
+        }
+
+        private void solenoid_current_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Solenoid_Current_TextBox);
+        }
+
+        private void solenoid_length_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Solenoid_Length_TextBox);
+        }
+
+        private void solenoid_voltage_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Solenoid_Voltage_TextBox);
+        }
+
+        private void rising_time_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Rising_Time_TextBox);
+        }
+
+        private void acceleator_stage_label_Click(object sender, EventArgs e)
+        {
+            TetxtCotrol_Clear(Accelerator_Stagenumber_TextBox);
+        }
+
+        //여기까지 입력값 개별로 지우기
+        ///
     }
 }

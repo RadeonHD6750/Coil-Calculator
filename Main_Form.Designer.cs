@@ -32,32 +32,33 @@
             this.System_Message_Box = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Ek_TextBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Ek_label = new System.Windows.Forms.Label();
             this.Projectile_Velocity_TextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.muzzle_velocity_label = new System.Windows.Forms.Label();
             this.Projectile_Length_TextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.projectile_length_label = new System.Windows.Forms.Label();
             this.Projectile_Mass_TextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.projectile_mass_label = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Solenoid_Voltage_TextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.solenoid_voltage_label = new System.Windows.Forms.Label();
             this.Solenoid_Current_TextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.solenoid_current_label = new System.Windows.Forms.Label();
             this.Solenoid_Length_TextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.solenoid_length_label = new System.Windows.Forms.Label();
             this.Solenoid_Inductance_TextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.solenoid_inductance_label = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Accelerator_Stagenumber_TextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.acceleator_stage_label = new System.Windows.Forms.Label();
             this.Rising_Time_TextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.rising_time_label = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Solenoid_Energy_Button = new System.Windows.Forms.Button();
             this.Energy_to_Velocity = new System.Windows.Forms.Button();
             this.Projectile_Ek_Button = new System.Windows.Forms.Button();
             this.TextBox_Clear = new System.Windows.Forms.Button();
-            this.Solenoid_Energy_Button = new System.Windows.Forms.Button();
+            this.Textbox_clear_button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -77,13 +78,13 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.Ek_TextBox);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.Ek_label);
             this.groupBox1.Controls.Add(this.Projectile_Velocity_TextBox);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.muzzle_velocity_label);
             this.groupBox1.Controls.Add(this.Projectile_Length_TextBox);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.projectile_length_label);
             this.groupBox1.Controls.Add(this.Projectile_Mass_TextBox);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.projectile_mass_label);
             this.groupBox1.Font = new System.Drawing.Font("HY헤드라인M", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(13, 564);
@@ -101,16 +102,17 @@
             this.Ek_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Ek_TextBox.TabIndex = 7;
             // 
-            // label10
+            // Ek_label
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(442, 126);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(188, 28);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "운동에너지 (J)";
+            this.Ek_label.AutoSize = true;
+            this.Ek_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ek_label.ForeColor = System.Drawing.Color.Black;
+            this.Ek_label.Location = new System.Drawing.Point(442, 126);
+            this.Ek_label.Name = "Ek_label";
+            this.Ek_label.Size = new System.Drawing.Size(188, 28);
+            this.Ek_label.TabIndex = 6;
+            this.Ek_label.Text = "운동에너지 (J)";
+            this.Ek_label.Click += new System.EventHandler(this.Ek_label_Click);
             // 
             // Projectile_Velocity_TextBox
             // 
@@ -120,16 +122,17 @@
             this.Projectile_Velocity_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Projectile_Velocity_TextBox.TabIndex = 5;
             // 
-            // label3
+            // muzzle_velocity_label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(442, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "탄속 (M/s)";
+            this.muzzle_velocity_label.AutoSize = true;
+            this.muzzle_velocity_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.muzzle_velocity_label.ForeColor = System.Drawing.Color.Black;
+            this.muzzle_velocity_label.Location = new System.Drawing.Point(442, 59);
+            this.muzzle_velocity_label.Name = "muzzle_velocity_label";
+            this.muzzle_velocity_label.Size = new System.Drawing.Size(136, 28);
+            this.muzzle_velocity_label.TabIndex = 4;
+            this.muzzle_velocity_label.Text = "탄속 (M/s)";
+            this.muzzle_velocity_label.Click += new System.EventHandler(this.muzzle_velocity_label_Click);
             // 
             // Projectile_Length_TextBox
             // 
@@ -139,16 +142,17 @@
             this.Projectile_Length_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Projectile_Length_TextBox.TabIndex = 3;
             // 
-            // label2
+            // projectile_length_label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(7, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 28);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "길이 (mm)";
+            this.projectile_length_label.AutoSize = true;
+            this.projectile_length_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.projectile_length_label.ForeColor = System.Drawing.Color.Black;
+            this.projectile_length_label.Location = new System.Drawing.Point(7, 126);
+            this.projectile_length_label.Name = "projectile_length_label";
+            this.projectile_length_label.Size = new System.Drawing.Size(140, 28);
+            this.projectile_length_label.TabIndex = 2;
+            this.projectile_length_label.Text = "길이 (mm)";
+            this.projectile_length_label.Click += new System.EventHandler(this.projectile_length_label_Click);
             // 
             // Projectile_Mass_TextBox
             // 
@@ -158,28 +162,29 @@
             this.Projectile_Mass_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Projectile_Mass_TextBox.TabIndex = 1;
             // 
-            // label1
+            // projectile_mass_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(7, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "질량 (gf)";
+            this.projectile_mass_label.AutoSize = true;
+            this.projectile_mass_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.projectile_mass_label.ForeColor = System.Drawing.Color.Black;
+            this.projectile_mass_label.Location = new System.Drawing.Point(7, 59);
+            this.projectile_mass_label.Name = "projectile_mass_label";
+            this.projectile_mass_label.Size = new System.Drawing.Size(121, 28);
+            this.projectile_mass_label.TabIndex = 0;
+            this.projectile_mass_label.Text = "질량 (gf)";
+            this.projectile_mass_label.Click += new System.EventHandler(this.projectile_mass_label_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Silver;
             this.groupBox2.Controls.Add(this.Solenoid_Voltage_TextBox);
-            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.solenoid_voltage_label);
             this.groupBox2.Controls.Add(this.Solenoid_Current_TextBox);
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.solenoid_current_label);
             this.groupBox2.Controls.Add(this.Solenoid_Length_TextBox);
-            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.solenoid_length_label);
             this.groupBox2.Controls.Add(this.Solenoid_Inductance_TextBox);
-            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.solenoid_inductance_label);
             this.groupBox2.Font = new System.Drawing.Font("HY헤드라인M", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox2.Location = new System.Drawing.Point(13, 816);
@@ -197,16 +202,17 @@
             this.Solenoid_Voltage_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Solenoid_Voltage_TextBox.TabIndex = 7;
             // 
-            // label7
+            // solenoid_voltage_label
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(442, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(168, 28);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "인가전압 (V)";
+            this.solenoid_voltage_label.AutoSize = true;
+            this.solenoid_voltage_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.solenoid_voltage_label.ForeColor = System.Drawing.Color.Black;
+            this.solenoid_voltage_label.Location = new System.Drawing.Point(442, 126);
+            this.solenoid_voltage_label.Name = "solenoid_voltage_label";
+            this.solenoid_voltage_label.Size = new System.Drawing.Size(168, 28);
+            this.solenoid_voltage_label.TabIndex = 6;
+            this.solenoid_voltage_label.Text = "인가전압 (V)";
+            this.solenoid_voltage_label.Click += new System.EventHandler(this.solenoid_voltage_label_Click);
             // 
             // Solenoid_Current_TextBox
             // 
@@ -216,16 +222,17 @@
             this.Solenoid_Current_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Solenoid_Current_TextBox.TabIndex = 5;
             // 
-            // label4
+            // solenoid_current_label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(442, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 28);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "인가전류 (A)";
+            this.solenoid_current_label.AutoSize = true;
+            this.solenoid_current_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.solenoid_current_label.ForeColor = System.Drawing.Color.Black;
+            this.solenoid_current_label.Location = new System.Drawing.Point(442, 59);
+            this.solenoid_current_label.Name = "solenoid_current_label";
+            this.solenoid_current_label.Size = new System.Drawing.Size(168, 28);
+            this.solenoid_current_label.TabIndex = 4;
+            this.solenoid_current_label.Text = "인가전류 (A)";
+            this.solenoid_current_label.Click += new System.EventHandler(this.solenoid_current_label_Click);
             // 
             // Solenoid_Length_TextBox
             // 
@@ -235,16 +242,17 @@
             this.Solenoid_Length_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Solenoid_Length_TextBox.TabIndex = 3;
             // 
-            // label5
+            // solenoid_length_label
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(7, 126);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 28);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "길이 (mm)";
+            this.solenoid_length_label.AutoSize = true;
+            this.solenoid_length_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.solenoid_length_label.ForeColor = System.Drawing.Color.Black;
+            this.solenoid_length_label.Location = new System.Drawing.Point(7, 126);
+            this.solenoid_length_label.Name = "solenoid_length_label";
+            this.solenoid_length_label.Size = new System.Drawing.Size(140, 28);
+            this.solenoid_length_label.TabIndex = 2;
+            this.solenoid_length_label.Text = "길이 (mm)";
+            this.solenoid_length_label.Click += new System.EventHandler(this.solenoid_length_label_Click);
             // 
             // Solenoid_Inductance_TextBox
             // 
@@ -254,24 +262,25 @@
             this.Solenoid_Inductance_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Solenoid_Inductance_TextBox.TabIndex = 1;
             // 
-            // label6
+            // solenoid_inductance_label
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(7, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 28);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "인덕턴스 (uH)";
+            this.solenoid_inductance_label.AutoSize = true;
+            this.solenoid_inductance_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.solenoid_inductance_label.ForeColor = System.Drawing.Color.Black;
+            this.solenoid_inductance_label.Location = new System.Drawing.Point(7, 59);
+            this.solenoid_inductance_label.Name = "solenoid_inductance_label";
+            this.solenoid_inductance_label.Size = new System.Drawing.Size(183, 28);
+            this.solenoid_inductance_label.TabIndex = 0;
+            this.solenoid_inductance_label.Text = "인덕턴스 (uH)";
+            this.solenoid_inductance_label.Click += new System.EventHandler(this.solenoid_inductance_label_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Silver;
             this.groupBox3.Controls.Add(this.Accelerator_Stagenumber_TextBox);
-            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.acceleator_stage_label);
             this.groupBox3.Controls.Add(this.Rising_Time_TextBox);
-            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.rising_time_label);
             this.groupBox3.Font = new System.Drawing.Font("HY헤드라인M", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox3.Location = new System.Drawing.Point(991, 564);
@@ -289,16 +298,17 @@
             this.Accelerator_Stagenumber_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Accelerator_Stagenumber_TextBox.TabIndex = 3;
             // 
-            // label8
+            // acceleator_stage_label
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(7, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(177, 28);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "가속단수 (단)";
+            this.acceleator_stage_label.AutoSize = true;
+            this.acceleator_stage_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.acceleator_stage_label.ForeColor = System.Drawing.Color.Black;
+            this.acceleator_stage_label.Location = new System.Drawing.Point(7, 126);
+            this.acceleator_stage_label.Name = "acceleator_stage_label";
+            this.acceleator_stage_label.Size = new System.Drawing.Size(177, 28);
+            this.acceleator_stage_label.TabIndex = 2;
+            this.acceleator_stage_label.Text = "가속단수 (단)";
+            this.acceleator_stage_label.Click += new System.EventHandler(this.acceleator_stage_label_Click);
             // 
             // Rising_Time_TextBox
             // 
@@ -308,16 +318,17 @@
             this.Rising_Time_TextBox.Size = new System.Drawing.Size(188, 39);
             this.Rising_Time_TextBox.TabIndex = 1;
             // 
-            // label9
+            // rising_time_label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(7, 59);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(183, 28);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "인가시간 (ms)";
+            this.rising_time_label.AutoSize = true;
+            this.rising_time_label.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rising_time_label.ForeColor = System.Drawing.Color.Black;
+            this.rising_time_label.Location = new System.Drawing.Point(7, 59);
+            this.rising_time_label.Name = "rising_time_label";
+            this.rising_time_label.Size = new System.Drawing.Size(183, 28);
+            this.rising_time_label.TabIndex = 0;
+            this.rising_time_label.Text = "인가시간 (ms)";
+            this.rising_time_label.Click += new System.EventHandler(this.rising_time_label_Click);
             // 
             // groupBox4
             // 
@@ -333,6 +344,18 @@
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "계산";
+            // 
+            // Solenoid_Energy_Button
+            // 
+            this.Solenoid_Energy_Button.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Solenoid_Energy_Button.ForeColor = System.Drawing.Color.Black;
+            this.Solenoid_Energy_Button.Location = new System.Drawing.Point(384, 57);
+            this.Solenoid_Energy_Button.Name = "Solenoid_Energy_Button";
+            this.Solenoid_Energy_Button.Size = new System.Drawing.Size(335, 60);
+            this.Solenoid_Energy_Button.TabIndex = 2;
+            this.Solenoid_Energy_Button.Text = "솔레노이드 에너지 계산";
+            this.Solenoid_Energy_Button.UseVisualStyleBackColor = true;
+            this.Solenoid_Energy_Button.Click += new System.EventHandler(this.Solenoid_Energy_Button_Click);
             // 
             // Energy_to_Velocity
             // 
@@ -369,17 +392,16 @@
             this.TextBox_Clear.UseVisualStyleBackColor = true;
             this.TextBox_Clear.Click += new System.EventHandler(this.TextBox_Clear_Click);
             // 
-            // Solenoid_Energy_Button
+            // Textbox_clear_button
             // 
-            this.Solenoid_Energy_Button.Font = new System.Drawing.Font("휴먼명조", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Solenoid_Energy_Button.ForeColor = System.Drawing.Color.Black;
-            this.Solenoid_Energy_Button.Location = new System.Drawing.Point(384, 57);
-            this.Solenoid_Energy_Button.Name = "Solenoid_Energy_Button";
-            this.Solenoid_Energy_Button.Size = new System.Drawing.Size(335, 60);
-            this.Solenoid_Energy_Button.TabIndex = 2;
-            this.Solenoid_Energy_Button.Text = "솔레노이드 에너지 계산";
-            this.Solenoid_Energy_Button.UseVisualStyleBackColor = true;
-            this.Solenoid_Energy_Button.Click += new System.EventHandler(this.Solenoid_Energy_Button_Click);
+            this.Textbox_clear_button.Font = new System.Drawing.Font("HY헤드라인M", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Textbox_clear_button.Location = new System.Drawing.Point(1227, 13);
+            this.Textbox_clear_button.Name = "Textbox_clear_button";
+            this.Textbox_clear_button.Size = new System.Drawing.Size(339, 60);
+            this.Textbox_clear_button.TabIndex = 6;
+            this.Textbox_clear_button.Text = "입력값 전체 지우기";
+            this.Textbox_clear_button.UseVisualStyleBackColor = true;
+            this.Textbox_clear_button.Click += new System.EventHandler(this.textbox_clear_Click);
             // 
             // Main_Form
             // 
@@ -387,6 +409,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1728, 1057);
+            this.Controls.Add(this.Textbox_clear_button);
             this.Controls.Add(this.TextBox_Clear);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -416,33 +439,34 @@
 
         private System.Windows.Forms.RichTextBox System_Message_Box;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label projectile_mass_label;
         private System.Windows.Forms.TextBox Projectile_Mass_TextBox;
         private System.Windows.Forms.TextBox Projectile_Length_TextBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label projectile_length_label;
         private System.Windows.Forms.TextBox Projectile_Velocity_TextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label muzzle_velocity_label;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox Solenoid_Current_TextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label solenoid_current_label;
         private System.Windows.Forms.TextBox Solenoid_Length_TextBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label solenoid_length_label;
         private System.Windows.Forms.TextBox Solenoid_Inductance_TextBox;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label solenoid_inductance_label;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox Accelerator_Stagenumber_TextBox;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label acceleator_stage_label;
         private System.Windows.Forms.TextBox Rising_Time_TextBox;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label rising_time_label;
         private System.Windows.Forms.TextBox Solenoid_Voltage_TextBox;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label solenoid_voltage_label;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button Projectile_Ek_Button;
         private System.Windows.Forms.Button TextBox_Clear;
         private System.Windows.Forms.Button Energy_to_Velocity;
         private System.Windows.Forms.TextBox Ek_TextBox;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Ek_label;
         private System.Windows.Forms.Button Solenoid_Energy_Button;
+        private System.Windows.Forms.Button Textbox_clear_button;
     }
 }
 

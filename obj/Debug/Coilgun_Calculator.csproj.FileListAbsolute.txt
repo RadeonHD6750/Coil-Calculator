@@ -1,0 +1,14 @@
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\bin\Debug\Coilgun_Calculator.exe.config
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\bin\Debug\Coilgun_Calculator.exe
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\bin\Debug\Coilgun_Calculator.pdb
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\bin\Debug\Electronic_Formula_Library.dll
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\bin\Debug\Electronic_Formula_Library.pdb
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\obj\Debug\Coilgun_Calculator.csprojAssemblyReference.cache
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\obj\Debug\Coil_EML.Main_Form.resources
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\obj\Debug\Coilgun_Calculator.Properties.Resources.resources
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\obj\Debug\Coilgun_Calculator.csproj.GenerateResource.cache
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\obj\Debug\Coilgun_Calculator.csproj.CopyComplete
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\obj\Debug\Coilgun_Calculator.exe
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\obj\Debug\Coilgun_Calculator.pdb
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\bin\Debug\Winform_Control_Text_Handler_Module.dll
+S:\Jimin_STORAGE\프로젝트\EML\EML_Calculator\Coilgun_Calculator\bin\Debug\Winform_Control_Text_Handler_Module.pdb
